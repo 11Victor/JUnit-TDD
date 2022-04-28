@@ -1,6 +1,7 @@
 package br.com.tdd.junit.model;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -69,6 +70,11 @@ public class Funcionario {
 
 	public void setSalario(BigDecimal salario) {
 		this.salario = salario;
+	}
+
+	public void reajustarSalario(BigDecimal reajuste) {
+		this.salario = this.salario.add(reajuste).setScale(2, RoundingMode.HALF_UP);
+		
 	}
 
 }
