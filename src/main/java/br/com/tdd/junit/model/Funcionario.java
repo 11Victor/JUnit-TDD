@@ -27,8 +27,6 @@ public class Funcionario {
 	@Column(name = "salario")
 	private BigDecimal salario;
 
-	
-
 	public Funcionario(long id, String nome, LocalDate dataAdmisssao, BigDecimal salario) {
 		super();
 		this.id = id;
@@ -72,7 +70,5 @@ public class Funcionario {
 	public void setSalario(BigDecimal salario) {
 		this.salario = salario;
 	}
-
-	
 
 }
