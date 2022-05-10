@@ -1,4 +1,4 @@
-package br.com.tdd.junit.model.service;
+package br.com.tdd.junit.service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

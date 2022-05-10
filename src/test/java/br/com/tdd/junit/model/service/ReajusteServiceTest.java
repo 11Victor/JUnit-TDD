@@ -1,13 +1,14 @@
 package br.com.tdd.junit.model.service;
 
-import static org.junit.Assert.assertEquals;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import br.com.tdd.junit.enums.Desempenho;
 import br.com.tdd.junit.model.Funcionario;
+import br.com.tdd.junit.service.ReajusteService;
 
 class ReajusteServiceTest {
 
@@ -18,7 +19,7 @@ class ReajusteServiceTest {
 		
 		service.concederReajuste(funcionario, Desempenho.A_Desejar);
 		
-		assertEquals(new BigDecimal("1030.00"), funcionario.getSalario());
+		Assertions.assertEquals(new BigDecimal("1030.00"), funcionario.getSalario());
 	}
 
 }

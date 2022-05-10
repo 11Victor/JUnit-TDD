@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import br.com.tdd.junit.model.Funcionario;
+import br.com.tdd.junit.service.BonusService;
 
 class BonusServiceTest {
 

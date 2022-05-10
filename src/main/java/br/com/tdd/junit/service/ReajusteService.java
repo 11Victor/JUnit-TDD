@@ -1,7 +1,8 @@
-package br.com.tdd.junit.model.service;
+package br.com.tdd.junit.service;
 
 import java.math.BigDecimal;
 
+import br.com.tdd.junit.enums.Desempenho;
 import br.com.tdd.junit.model.Funcionario;
 
 public class ReajusteService {
