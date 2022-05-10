@@ -1,7 +1,5 @@
 package br.com.tdd.junit.model.service;
 
-import static org.junit.Assert.assertThrows;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -16,7 +14,7 @@ class BonusServiceTest {
 	@Test
 	void bonusZeroParaFuncionarioComSalarioAlto() {
 		BonusService service = new BonusService();
-		assertThrows(IllegalArgumentException.class,
+		Assertions.assertThrows(IllegalArgumentException.class,
 				() -> service.calculaBonus(new Funcionario(0L, "Victor", LocalDate.now(), new BigDecimal("35000"))));
 		
 //		Mesmo teste mas utilizando try catch
