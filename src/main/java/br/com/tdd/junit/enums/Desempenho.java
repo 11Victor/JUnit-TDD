@@ -1,7 +1,30 @@
 package br.com.tdd.junit.enums;
 
+import java.math.BigDecimal;
+
 public enum Desempenho {
+
+	A_Desejar {
+		@Override
+		public BigDecimal percentualReajuste() {
+			return new BigDecimal("0.03");
+		}
+	},
 	
-	A_Desejar, Bom, Otimo
+	Bom {
+		@Override
+		public BigDecimal percentualReajuste() {
+			return new BigDecimal("0.15");
+		}
+	},
+	
+	Otimo {
+		@Override
+		public BigDecimal percentualReajuste() {
+			return new BigDecimal("0.20");
+		}
+	};
+
+	public abstract BigDecimal percentualReajuste();
 
 }
