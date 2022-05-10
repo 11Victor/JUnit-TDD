@@ -15,11 +15,31 @@ class ReajusteServiceTest {
 	@Test
 	public void reajusteTresPorcentoDesempenhoADesejar() {
 		ReajusteService service = new ReajusteService();
-		Funcionario funcionario = new Funcionario(0L, "Ana", LocalDate.now(), new BigDecimal("1000"));
+		Funcionario funcionario = new Funcionario(0L, "Victor", LocalDate.now(), new BigDecimal("1000"));
 		
 		service.concederReajuste(funcionario, Desempenho.A_Desejar);
 		
 		Assertions.assertEquals(new BigDecimal("1030.00"), funcionario.getSalario());
+	}
+	
+	@Test
+	public void reajusteQuinzePorcentoDesempenhoBom() {
+		ReajusteService service = new ReajusteService();
+		Funcionario funcionario = new Funcionario(0L, "Stephany", LocalDate.now(), new BigDecimal("1000"));
+		
+		service.concederReajuste(funcionario, Desempenho.Bom);
+		
+		Assertions.assertEquals(new BigDecimal("1150.00"), funcionario.getSalario());
+	}
+	
+	@Test
+	public void reajusteOtimoPorcentoDesempenhoOtimo() {
+		ReajusteService service = new ReajusteService();
+		Funcionario funcionario = new Funcionario(0L, "Vera", LocalDate.now(), new BigDecimal("1000"));
+		
+		service.concederReajuste(funcionario, Desempenho.Otimo);
+		
+		Assertions.assertEquals(new BigDecimal("1200.00"), funcionario.getSalario());
 	}
 
 }

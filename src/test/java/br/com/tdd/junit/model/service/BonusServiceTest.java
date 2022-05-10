@@ -32,4 +32,6 @@ class BonusServiceTest {
 		Assertions.assertEquals(new BigDecimal("1000.00"), bonus);
 	}
 	
+	
+	
 }
